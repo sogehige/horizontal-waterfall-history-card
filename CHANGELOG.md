@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [2026.11.24] - 2026-11-24
 
 ### Added
 - `attribute` option (global and per-entity): track an entity attribute instead of the state, e.g. `attribute: hvac_action` on `climate.koupelna` to chart `heating`/`idle`. Attribute values are matched against `state_colors` like states; unmapped attribute values render as no data; boolean attributes map to binary on/off; the entity's own unknown/unavailable state still takes precedence. In attribute mode history is fetched with `significant_changes_only=0` (the endpoint defaults the filter to on when the parameter is absent) so attribute-only updates are recorded, and each (entity, attribute, offset) combination gets its own cache entry.
